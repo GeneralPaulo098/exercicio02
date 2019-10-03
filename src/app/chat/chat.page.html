@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Chat</ion-title>
+    <ion-buttons>
+      <ion-button href="/home/" color="success">Home</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let conversa of conversas">
+      <ion-avatar slot="start">
+        <img src="{{conversa.img}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{conversa.nome}}</h2>
+        <p>{{conversa.assunto}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

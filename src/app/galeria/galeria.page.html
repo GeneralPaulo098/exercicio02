@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Galeria</ion-title>
+    <ion-buttons>
+      <ion-button href="/home/" color="success">Home</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-slides>
+    <ion-slide *ngFor="let foto of Galeria">
+      <ion-card>
+        <img src="{{foto.img}}"/>
+        <ion-card-header>
+            <h3>{{foto.text}}</h3>
+        </ion-card-header>
+      </ion-card>
+      
+      
+    </ion-slide>
+  </ion-slides>
 </ion-content>
