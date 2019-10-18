@@ -6,21 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./boletim.page.scss'],
 })
 export class BoletimPage implements OnInit {
-  boletim;
-  media;
+  boletim:{disciplina:string, nota:number,}[];
+  media:number;
   constructor() {
     this.boletim = [
       {
-        'disciplina': 'DDM',
-        'nota': 10.0
+        disciplina: 'DDM',
+        nota: 10.0
       },
       {
-        'disciplina': 'PAW',
-        'nota': 10.0
+        disciplina: 'PAW',
+        nota: 10.0
       },
       {
-        'disciplina': 'Redes',
-        'nota': 7.0
+        disciplina: 'Redes',
+        nota: 7.0
       },
     ];
     let soma = 0

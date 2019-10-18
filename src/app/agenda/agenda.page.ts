@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-agenda',
@@ -7,24 +8,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendaPage implements OnInit {
   
-  agenda;
-  
-  constructor() {
+  agenda:{data:any,hora:any, conteudo:any,}[];
+
+  constructor(public toastController: ToastController){
+    
     this.agenda = [
       {
-        'data':'30/09 10:00',
-        'conteudo':'trabalho DDM',
+        data:'30/09',
+        hora:'10:00',
+        conteudo:'trabalho DDM',
       },
       {
-        'data':'02/10 12:00',
-        'conteudo':'prova de PAW'
+        data:'02/10',
+        hora:'12:00',
+        conteudo:'prova de PAW'
       },
       {
-        'data':'08/11 12:00',
-        'conteudo':'prova de Banco de Dados'
+        data:'08/11',
+        hora:'12:00',
+        conteudo:'prova de Banco de Dados'
       }
-    ]
-   }
+    ];
+  }
+  
+  async apagar(agendado) {
+    let x = this.agenda.indexOf(agendado);
+    this.agenda.splice(x,1);
+    let toast = await this.toastController.create({
+      message: 'agenda apagada com sucesso!',
+      duration: 2000
+    });
+    toast.present();
+  }
 
   ngOnInit() {
   }

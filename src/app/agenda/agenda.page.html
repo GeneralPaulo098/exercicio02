@@ -11,9 +11,10 @@
   <ion-list>
     <ion-item *ngFor="let agendado of agenda">
       <ion-label>
-        <h2>{{agendado.data}}</h2>
+        <h2>{{agendado.data}} {{agendado.hora}}</h2>
         <p>{{agendado.conteudo}}</p>
       </ion-label>
+      <ion-icon slot="end" name="trash" (click)="apagar(agendado)"></ion-icon>
     </ion-item>
   </ion-list>
 
