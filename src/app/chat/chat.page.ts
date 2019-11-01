@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat.page.scss'],
 })
 export class ChatPage implements OnInit {
-conversas:{nome:string, assunto:string, img:string}[];
+  nova_conversa:{nome:string, assunto:string, img:string}[];
+  conversas:{nome:string, assunto:string, img:string}[];
   constructor() {
     this.conversas = [
       {

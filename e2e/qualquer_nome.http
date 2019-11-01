@@ -1,0 +1,26 @@
+
+GET http://5d262d00eeb36400145c59b3.mockapi.io/notas HTTP/1.1
+###
+POST http://5d262d00eeb36400145c59b3.mockapi.io/notas HTTP/1.1
+Content-Type: application/json
+
+{
+    "createdAt":"2019-10-31",
+    "disciplina":"paw",
+    "nota":"10"
+}
+
+###
+
+PUT http://5d262d00eeb36400145c59b3.mockapi.io/notas/8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "createdAt":"2019-10-31",
+    "disciplina":"redes2",
+    "nota":"10"
+}
+
+###
+
+DELETE http://5d262d00eeb36400145c59b3.mockapi.io/notas/8 HTTP/1.1

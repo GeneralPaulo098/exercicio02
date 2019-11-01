@@ -8,6 +8,10 @@
 </ion-header>
 
 <ion-content>
+    <ion-input placeholder="disciplina" [(ngModel)]="nova_disciplina.disciplina"></ion-input>
+    <ion-input placeholder="nota" [(ngModel)]="nova_disciplina.nota"></ion-input>
+    <ion-button (click)="adicionar()">ok</ion-button>
+
   <ion-list>
     <ion-list-header>
       <ion-label>Notas</ion-label>

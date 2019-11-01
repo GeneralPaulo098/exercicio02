@@ -8,6 +8,11 @@
 </ion-header>
 
 <ion-content>
+    <ion-input placeholder="avatar" [(ngModel)]="nova_conversa.img"></ion-input>
+    <ion-input placeholder="nome" [(ngModel)]="nova_conversa.nome"></ion-input>
+    <ion-input placeholder="assunto" [(ngModel)]="nova_conversa.assunto"></ion-input>
+    <ion-button (click)="adicionar()">ok</ion-button>
+
   <ion-list>
     <ion-item *ngFor="let conversa of conversas">
       <ion-avatar slot="start">
