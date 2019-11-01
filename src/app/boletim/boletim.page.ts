@@ -26,9 +26,13 @@ export class BoletimPage implements OnInit {
 
   ngOnInit() {
   }
+
   adicionar() {
-    this.boletim.push(this.nova_disciplina);
-    this.reset();
+    this.http.post("http://5d262d00eeb36400145c59b3.mockapi.io/notas",this.nova_disciplina).subscribe((result) =>{
+      this.boletim.push(this.nova_disciplina);
+      this.reset();
+    })
+
   }
   reset() {
     this.nova_disciplina = {
